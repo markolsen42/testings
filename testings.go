@@ -8,12 +8,15 @@ func findin(str string, h string) int {
 }
 //next thing to work on
 func findReplaceText(str string, h string) string {
-  return "the text insert"
+	var splits = strings.Split(h, str);
+	fmt.Print(splits)
+	return splits[1]
 }
+
 
 func main() {
 
-var html = "jfkasdhfkjhsdafkj***insert***ldkfsajsdlkfj"
-  fmt.Println(findin("***", html))
+var html = "jfkasdhfkjhsdafkj***insert***ldkfsajsdlkfj***insert2***"
+  fmt.Print(findReplaceText("***",html))
 
 }
